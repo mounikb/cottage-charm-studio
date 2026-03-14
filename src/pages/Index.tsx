@@ -8,7 +8,6 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import botanicalStem from "@/assets/botanical-stem.png";
 import heroImage from "@/assets/hero-cottage.jpg";
-import botanicalStem from "@/assets/botanical-stem.png";
 
 const topics = [
   { category: "Reading", title: "Why I read 50 books a year", description: "It started as a challenge and became the best habit of my life.", size: "tall" as const },

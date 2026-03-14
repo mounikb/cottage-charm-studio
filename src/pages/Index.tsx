@@ -128,8 +128,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Hero Image */}
-      <HeroImage />
 
       {/* Features / How it works */}
       <FeaturesSection />

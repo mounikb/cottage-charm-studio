@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import TopicCard from "@/components/TopicCard";
-import HeroImage from "@/components/HeroImage";
 import FeaturesSection from "@/components/FeaturesSection";
 import QuoteSection from "@/components/QuoteSection";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import botanicalStem from "@/assets/botanical-stem.png";
+import heroImage from "@/assets/hero-cottage.jpg";
 import botanicalStem from "@/assets/botanical-stem.png";
 
 const topics = [

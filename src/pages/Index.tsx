@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import TopicCard from "@/components/TopicCard";
+import HeroImage from "@/components/HeroImage";
+import FeaturesSection from "@/components/FeaturesSection";
+import QuoteSection from "@/components/QuoteSection";
+import CallToAction from "@/components/CallToAction";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
 const topics = [
@@ -17,7 +22,8 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <main className="max-w-6xl mx-auto px-6 md:px-12 pt-16 md:pt-24 pb-24">
+      {/* Hero Section */}
+      <main className="max-w-6xl mx-auto px-6 md:px-12 pt-16 md:pt-24 pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           {/* Left — Hero copy */}
           <div className="space-y-8">
@@ -89,6 +95,21 @@ const Index = () => {
           </div>
         </div>
       </main>
+
+      {/* Hero Image */}
+      <HeroImage />
+
+      {/* Features / How it works */}
+      <FeaturesSection />
+
+      {/* Quote */}
+      <QuoteSection />
+
+      {/* CTA */}
+      <CallToAction />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

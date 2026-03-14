@@ -25,62 +25,84 @@ const Index = () => {
       <Navbar />
 
       {/* Hero — Editorial centered headline */}
-      <section className="relative max-w-7xl mx-auto px-6 md:px-12 pt-20 md:pt-32 pb-10">
+      <section className="relative max-w-7xl mx-auto px-6 md:px-12 pt-20 md:pt-28 pb-10">
         {/* Floating botanical accent */}
         <motion.img
           src={botanicalStem}
           alt=""
           aria-hidden
           initial={{ opacity: 0, rotate: -10 }}
-          animate={{ opacity: 0.35, rotate: 0 }}
-          transition={{ delay: 0.5, duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
-          className="hidden lg:block absolute -right-4 top-8 w-28 pointer-events-none select-none"
+          animate={{ opacity: 0.3, rotate: 0 }}
+          transition={{ delay: 0.6, duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
+          className="hidden lg:block absolute left-[48%] top-4 w-20 pointer-events-none select-none"
         />
 
-        <div className="max-w-3xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left — Copy */}
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
+            >
+              <span className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground font-medium">
+                Your digital garden awaits
+              </span>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.08, duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
+              className="font-serif text-5xl md:text-7xl lg:text-[5.5rem] text-foreground mt-6 leading-[0.95] tracking-[-0.03em]"
+            >
+              Grow your
+              <br />
+              <span className="text-primary italic">ideas</span> here.
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.18, duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+              className="text-lg md:text-xl text-muted-foreground mt-8 max-w-xl leading-relaxed"
+            >
+              Leaflet is a quiet corner of the internet where you can collect, write, 
+              and share the things that matter — no algorithms, no noise.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.28, duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+              className="flex flex-wrap gap-3 mt-10"
+            >
+              <Button variant="cottage" size="lg">
+                Plant your garden →
+              </Button>
+              <Button variant="cottage-outline" size="lg">
+                Explore gardens
+              </Button>
+            </motion.div>
+          </div>
+
+          {/* Right — Hero image */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+            className="relative"
           >
-            <span className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground font-medium">
-              Your digital garden awaits
-            </span>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.08, duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
-            className="font-serif text-5xl md:text-7xl lg:text-8xl text-foreground mt-6 leading-[0.95] tracking-[-0.03em]"
-          >
-            Grow your
-            <br />
-            <span className="text-primary italic">ideas</span> here.
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.18, duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-            className="text-lg md:text-xl text-muted-foreground mt-8 max-w-xl leading-relaxed"
-          >
-            Leaflet is a quiet corner of the internet where you can collect, write, 
-            and share the things that matter — no algorithms, no noise.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.28, duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-            className="flex flex-wrap gap-3 mt-10"
-          >
-            <Button variant="cottage" size="lg">
-              Plant your garden →
-            </Button>
-            <Button variant="cottage-outline" size="lg">
-              Explore gardens
-            </Button>
+            <div className="aspect-[4/5] overflow-hidden rounded-lg shadow-paper">
+              <img
+                src={heroImage}
+                alt="A cozy desk with journal, wildflowers and tea"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="text-[10px] uppercase tracking-[0.15em] text-muted-foreground mt-3 text-center font-medium">
+              Your quiet corner of the internet
+            </p>
           </motion.div>
         </div>
       </section>
